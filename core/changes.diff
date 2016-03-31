@@ -1,0 +1,16 @@
+diff --git a/login/lib.php b/login/lib.php
+index dd357f4..07da951 100644
+--- a/login/lib.php
++++ b/login/lib.php
+@@ -277,7 +277,10 @@
+ function core_login_get_return_url() {
+     global $CFG, $SESSION, $USER;
+     // Prepare redirection.
+-    if (user_not_fully_set_up($USER)) {
++
++    if (isset($CFG->login_intermezzo)) {
++        $urltogo = $CFG->wwwroot.$CFG->login_intermezzo;
++    } else if (user_not_fully_set_up($USER)) {
+         $urltogo = $CFG->wwwroot.'/user/edit.php';
+         // We don't delete $SESSION->wantsurl yet, so we get there later.
+ 

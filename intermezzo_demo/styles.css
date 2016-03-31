@@ -1,0 +1,33 @@
+@CHARSET "UTF-8";
+.local-intermezzo_demo-displaybox {
+	width: 50%;
+	height: 500px;
+	background: rgb(99,0,0);
+	color: white;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	border-radius: 5px;
+	margin-bottom: 40px;
+}
+
+.local-intermezzo_demo-content {
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.local-intermezzo_demo-displaybox h1,h2,h3,h4,h5,h6,h7 {
+	color: white;
+}
+
+.local-intermezzo_demo-buttonbox {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.local-intermezzo_demo-button {
+	display: inline-block;
+}
